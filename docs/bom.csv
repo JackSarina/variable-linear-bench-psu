@@ -1,1 +1,17 @@
-
+Name,Description,Designator,Footprint,LibRef,Quantity
+,,,,,
+BINDING POST DUAL 5-WAY,,B1,,BU-P6883,1
+UPW1V222MHD6,227AVG035MFBJ AVG Series 35 V 220 uF 8 x 12 mm LS=3.5 mm Radial Aluminum Polymer Capacitor,C1,FP-227AVG035MFBJ-MFG,CMP-00087-58146014-1,1
+UPJ1V101MPD,WCAP-ATLI Aluminum Electrolytic Capacitors,C2,WCAP-ATLI_D5H11,CMP-03913-54007346-2,1
+C410C104Z5U5TA7200,"Multilayer Ceramic Capacitor, 0.1 uF, 50 V, -20%, +80%, Z5U, Axial Leaded","C3, C4",FP-RHE0K1-MFG,CMP-06035-006182-1,2
+8.6002E+11,860020472003 WCAP-ATG5 Aluminum Electrolytic Capacitors,C5,WCAP-ATG5_D5H11,CMP-03913-53914185-1,1
+1N4007,BRIDGE RECT 1PHASE 800V 6A KBJ,D1-D4,FP-KBJ-MFG,CMP-12791-000017-1,4
+1N4007,"Rectifier diode 1000 V 1 A DO-41, ,","D5, D6",FP-1N4007-MFG,CMP-123542-000001-1,2
+"IEC C14 PEM, Fused, DPST Switch, Illuminated",Mains Power Connector,J1,,719W-UEL3BR51,1
+CONN HDR 2POS 5.08mm RA THT,"2-position, 5.08mm pitch, shrouded, right-angle, through-hole header","J2, J3",OSTOQ025451,OSTOQ025451,2
+CONN HDR 3POS 2.54mm,"Header, 3-position, 0.1in pitch, straight, TH",J4,"Connector, header vertical 3-pos 2.54mm",PRPC003SAAN-RC,1
+"240 Ohm,1/4W,1%","Through Hole Resistor 240 Ohm,1/4W,1%, Axial",R1,pp,RNMF14FTC240R,1
+"Potentiometer linear 4.7 kOhm±20 %,","Potentiometer linear 4.7 kOhm±20 %, PC16SH07IP04-472A2020--TA, Piher",R2,PC16SH07IP04-472A2020--TA,PC16SH07IP04-472A2020--TA,1
+XFMR 115VAC PRI / 18VCT SEC 90VA,"Power transformer, 115VAC primary, 18V center-tapped secondary, 5A, 90VA, chassis mount, wire leads",T1,,166P18,1
+5000,PC TEST POINT MINIATURE RED,"TP1, TP2, TP3, TP4, TP5",FP-5000-MFG,CMP-19636-000027-1,5
+LM317TG,"1.5 A Adjustable Output, Positive Voltage Regulator, 0 to 125 degC, 3-Pin TO-220 (221AB-01), Pb-Free, Rail",U1,ONSC-TO-220-3-221AB-01,CMP-1679-00013-1,1
