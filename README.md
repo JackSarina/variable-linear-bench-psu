@@ -57,8 +57,7 @@ of 20-21V.
 Rather than a conventional PCB-mount heatsink, the LM317 is mounted directly 
 to the steel enclosure wall via an insulating washer and nylon bushing. The 
 enclosure acts as a distributed heatsink with significantly lower thermal 
-resistance than any small clip-on heatsink. Ventilation slots are included 
-in the enclosure top and bottom panels to enable natural convection airflow.
+resistance than any small clip-on heatsink.
 
 **Connector strategy**
 
@@ -139,9 +138,10 @@ Key components:
 
 ## What I Would Change in Revision 2
 
-*To be completed after build and testing — this section will document 
-layout errors, component issues, and improvements identified during 
-physical assembly and debug.*
+In a mark 2 revision of this project, there are a few things that I would change.
+Firstly, in a revision I would like to add a chassis fan to this design to help 
+with airflow and heat disipation.additionally I would like to add a trimmer 
+poteniometer to the design to absorb tolerances and allow for closer calibration of voltage output. 
 
 ---
 
