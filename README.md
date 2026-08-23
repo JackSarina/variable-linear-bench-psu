@@ -28,12 +28,12 @@ enclosure build skills.
 
 This project covers the full hardware development cycle for a benchtop 
 linear power supply. The design intent was to build a genuinely usable 
-piece of bench equipment rather than a simplified kit — including proper 
+piece of bench equipment rather than a simplified kit, including proper 
 mains isolation, a grounded metal enclosure, panel instrumentation, and 
 pluggable wire-to-board connectors for serviceability.
 
 The regulation circuit is built around the LM317T adjustable linear 
-regulator. Output voltage is set by a panel-mount potentiometer driving 
+regulator. Output voltage is set by a PCB-mount potentiometer driving 
 the feedback divider network. Protection diodes are included per the 
 LM317 datasheet recommendations to prevent damage from capacitor discharge 
 under fault conditions.
@@ -54,10 +54,11 @@ of 20-21V.
 
 **Thermal management**
 
-Rather than a conventional PCB-mount heatsink, the LM317 is mounted directly 
-to the steel enclosure wall via an insulating washer and nylon bushing. The 
-enclosure acts as a distributed heatsink with significantly lower thermal 
-resistance than any small clip-on heatsink.
+A dedicated PCB-mount heatsink was selected for the LM317 after the enclosure wall-mounting approach orignally considered proved mechanically incompatible with the final  PCB and enclosure layout. The selected heatsink is the Aavid 52902B00000G. A bolt-on TO-220 aliumium fin heatsink with a thermal resistance of 3.7°C/W, 1.5" fin height, black anodized finish, mounted vertically at board level.
+
+At worst case operating conditions, approximately 24V DC rail, 1.5V output, 1A load. Power dissipation across the LM317 reaches 22.5W, which would drive junction temperature beyond the 150°C maximum. At more typical bench supply operating points the thermal performance is acceptable: at 12V output and 500mA load, dissipation is 6W and junction temperature stays below 90°C with 25°C ambient.
+
+The practical implication is that output current capability at low output voltages is thermally limited rather than regulator-limited. At 1.5V output the supply can sustain approximately 300-400mA continuously before approaching the thermal limit. At 12V output and above the full 1A rating is available. This is an accepted tradeoff for a linear bench supply — the wide input-to-output voltage differential inherent in linear regulation creates unavoidable thermal stress at the low end of the adjustment range. The insulating mica washer and nylon shoulder bushing between the LM317 tab and heatsink are required because the TO-220 tab is electrically connected to the output pin, not ground — direct contact with any grounded metal surface would short the output.
 
 **Connector strategy**
 
@@ -72,10 +73,7 @@ modification.
 Mains earth ground connects from the IEC power entry module to a grounding 
 lug bolted directly to the enclosure wall with a star washer biting through 
 any surface coating. Circuit signal ground connects to the enclosure at a 
-single point only, near the output binding posts. The LM317 heatsink tab — 
-which is electrically connected to the output pin, not ground — is isolated 
-from the enclosure wall by an insulating mica washer and nylon shoulder 
-bushing.
+single point only, near the output binding posts.The LM317 heatsink tab requires special attention regardless of mounting approach — the TO-220 tab is electrically connected to the output pin, not ground. A mica insulating washer and nylon shoulder bushing are installed between the LM317 tab and the Aavid 529802B00000G heatsink body, with thermal paste on both interfaces to minimize added thermal resistance. Without this isolation the heatsink would sit at output voltage rather than at a floating or ground potential — a shock hazard if the heatsink contacts any grounded metal surface inside the enclosure. The nylon bushing additionally isolates the mounting screw from the tab to complete the isolation.
 
 ---
 
@@ -138,10 +136,9 @@ Key components:
 
 ## What I Would Change in Revision 2
 
-In a mark 2 revision of this project, there are a few things that I would change.
-Firstly, in a revision I would like to add a chassis fan to this design to help 
-with airflow and heat disipation.additionally I would like to add a trimmer 
-poteniometer to the design to absorb tolerances and allow for closer calibration of voltage output. 
+In a future revision of this project, the primary improvement would be to the thermal management strategy. As noted in the thermal management section, the original design intent was to mount the LM317 directly to a chassis side panel, using the enclosure itself as a distributed heatsink for improved thermal dissipation. This approach proved mechanically incompatible with the final PCB layout and was replaced with a PCB-mount heatsink. A future redesign would resolve this from the start positioning the LM317 at the board edge specifically to accommodate chassis wall mounting, and incorporating ventilation slots or a low-profile fan system in the side panels to further improve airflow and overall thermal performance.
+
+Additionally, a future revision would draw inspiration from the Wanptek DPS3010U bench supply, specifically its digital display interface, USB-C and USB-A output compatibility, and coarse and fine voltage adjustment controls. These features would significantly improve the usability of the supply as a day-to-day bench instrument.
 
 ---
 
