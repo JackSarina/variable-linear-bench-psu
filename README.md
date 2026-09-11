@@ -122,18 +122,6 @@ Key components:
 
 ---
 
-## Test Results
-
-| Output Voltage Set | Measured Output | Ripple (mV p-p) |
-|---|---|---|
-| 5.0V | | |
-| 12.0V | | |
-| 18.0V | | |
-
-*To be completed after assembly and testing*
-
----
-
 ## What I Would Change in Revision 2
 
 In a future revision of this project, the primary improvement would be to the thermal management strategy. As noted in the thermal management section, the original design intent was to mount the LM317 directly to a chassis side panel, using the enclosure itself as a distributed heatsink for improved thermal dissipation. This approach proved mechanically incompatible with the final PCB layout and was replaced with a PCB-mount heatsink. A future redesign would resolve this from the start positioning the LM317 at the board edge specifically to accommodate chassis wall mounting, and incorporating ventilation slots or a low-profile fan system in the side panels to further improve airflow and overall thermal performance.
