@@ -6,7 +6,7 @@ approximately 1.5V to 21V DC at up to 1A continuous. Built as an independent
 hardware project to develop practical PCB design, analog circuit design, and 
 enclosure build skills.
 
-![Completed Build](photos/completed_build.jpg)
+![Completed Build](photos/completed_build.jpeg)
 
 ---
 
@@ -112,13 +112,10 @@ Key components:
 ## Build Photos
 
 ### Bare PCB
-![Bare PCB](photos/bare_pcb.jpg)
-
-### Populated Board
-![Populated Board](photos/populated_board.jpg)
+![Bare PCB](photos/bare_pcb.jpeg)
 
 ### Completed Build
-![Completed Build](photos/completed_build.jpg)
+![Completed Build](photos/completed_build.jpeg)
 
 ---
 
